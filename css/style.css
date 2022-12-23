@@ -1,0 +1,113 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	color: #fff;
+	font-weight: 100;
+}
+.bg-video-container {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -2;
+}
+.bg-video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: cover;
+}
+.clock-face {
+	height: 80vmin;
+	width: 80vmin;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.clock-face::after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 98%;
+	height: 98%;
+	left: 1%;
+	top: 1%;
+	border-radius: 50%;
+	border: 1px solid #fff;
+}
+
+/*END OF PART 2 CSS BIT*/
+
+.clock-face::before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: calc(50% - 10px);
+	top: calc(50% - 10px);
+	border-radius: 50%;
+	background-color: #fff;
+}
+.clock-heading {
+	font-weight: 100;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-bottom: 20vmin; 
+}
+.countdown {
+	text-align: center;
+	margin-top: 100px; /*I ADDED THIS LINE IN*/
+}
+.countdown-heading {
+	font-weight: 100;
+	font-size: 18px;
+}
+.countdown-body {
+	display: flex;
+	font-size: 26px;
+	font-weight: 700;
+}
+
+.countdown h2 {
+	font-size: 20px;
+	color: #FF8C00;
+}
+
+/*clock hands*/
+.clock-hand {
+	background: #fff;
+	position: absolute;
+	bottom: calc(50% - 40px);
+}
+.clock-hours {
+	width: 4px;
+	height: 45%;
+	left: calc(50% - 2px);
+	transform-origin: 2px calc(100% - 40px);
+}
+.clock-minutes {
+	width: 4px;
+	height: 55%;
+	left: calc(50% - 2px);
+	transform: rotate(45deg);
+	transform-origin: 2px calc(100% - 40px);
+}
+.clock-seconds {
+	width: 2px;
+	height: 65%;
+	left: calc(50% - 1px);
+	transform-origin: 1px calc(100% - 40px);
+}
+
